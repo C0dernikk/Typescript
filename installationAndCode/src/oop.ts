@@ -1,0 +1,128 @@
+// class Chai {
+//     flavour: string;
+//     price: number;
+
+//     // constructor(flavour: string, price: number){
+//     //     this.flavour = flavour
+//     //     this.price = price
+//     // }
+//     constructor(flavour: string){
+//         this.flavour = flavour
+//         console.log(this);
+//     }
+// }
+
+// const masalaChai = new Chai("Ginger")
+// masalaChai.flavour = "masala"
+
+class Chai {
+    public flavour: string = "Masala"
+    private secretIngredient = "cardamom" // Can be accessed within the class
+    
+    reveal(){
+        return this.secretIngredient
+    }
+}
+const c = new Chai()
+
+
+class Shop {
+    protected shopName = "chai corner" // can be accessed within the class and among inherited members
+
+}
+
+class Branch extends Shop {
+    getName(){
+        return this.shopName
+    }
+}
+
+new Branch().getName // Can access shopName via Branch
+
+class Wallet {
+    #balance = 100 // private
+    getBalance(){
+        return this.#balance
+    }
+}
+
+const w = new Wallet()
+
+class Cup {
+    readonly capacity: number = 250 // You cannot change the value
+    constructor(capacity?: number){ // Can use default value too
+        if(capacity !== undefined)
+        this.capacity = capacity
+    }
+}
+
+const cup1 = new Cup(300)
+console.log(cup1.capacity);
+// cup1.capacity = 400
+const cup2 = new Cup()
+console.log(cup2.capacity);
+
+// Controlled gates
+
+// '_' meant internal usage only for the given propery and
+// if name of property and its getter/setters matches, it helps to avoid
+// recursion
+
+class ModernChai {
+    private _sugar  = 2
+    get sugar(){
+        return this._sugar
+    }
+
+    set sugar(value: number){
+        if(value > 5) throw new Error("Too sweet")
+            this._sugar = value
+    }
+}
+
+const mChai = new ModernChai()
+mChai.sugar = 3
+console.log(mChai.sugar);
+
+
+//TypeScript automatically:
+// Declares a class property named flavour
+// Assigns the constructor argument to that property
+class EkChai {
+    static shopName = "chaiCode caffe"
+    constructor (public flavour: string){
+
+    }
+}
+
+console.log(EkChai.shopName); // Static values are accessed by Class name
+
+// Abstract class defines the methods and functionalities that would be present
+abstract class Drink{
+    abstract make(): void
+}
+
+class MyChai extends Drink{
+    make(){
+        console.log("Brewing chai");
+    }
+}
+
+//Composition --> works like inheritance
+class Heater {
+    heat(){
+
+    }
+}
+
+class ChaiMaker{
+    constructor(private heater: Heater){
+
+    }
+    make(){
+        this.heater.heat
+    }
+}
+
+
+
