@@ -1,15 +1,15 @@
-let response: any = "44"
+let response: any = 44
 // we can access any property or method, to get suggestion
 // and make sure we know the type we use forceful assertion
-let numericLength: number = (response as string).length
-console.log(numericLength);
+
+console.log("here",(response as string).length);
 
 type Book = {
     name: string
 }
 
 let bookString = '{"name": "who moved my cheese"}'
-let bookObject = JSON.parse(bookString) as Book
+let bookObject = JSON.parse(bookString) as Book // JSON.parse() return any
 console.log(bookObject.name);
 
 const inputElement = document.getElementById("username") as HTMLInputElement
@@ -19,9 +19,9 @@ let value: any
 value = "chai"
 value = [1, 2, 3]
 value = 2.5
-value.toUpperCase()
+// value.toUpperCase()
 
-let newValue: unknown
+let newValue: unknown // Forces narrowing and validation
 
 newValue = "chai"
 newValue = [1, 2, 3]

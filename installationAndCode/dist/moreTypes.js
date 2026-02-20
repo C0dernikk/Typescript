@@ -1,20 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let response = "44";
+let response = 44;
 // we can access any property or method, to get suggestion
 // and make sure we know the type we use forceful assertion
-let numericLength = response.length;
-console.log(numericLength);
+console.log("here", response.length);
 let bookString = '{"name": "who moved my cheese"}';
-let bookObject = JSON.parse(bookString);
+let bookObject = JSON.parse(bookString); // JSON.parse() return any
 console.log(bookObject.name);
 const inputElement = document.getElementById("username");
 let value;
 value = "chai";
 value = [1, 2, 3];
 value = 2.5;
-value.toUpperCase();
-let newValue;
+// value.toUpperCase()
+let newValue; // Forces narrowing and validation
 newValue = "chai";
 newValue = [1, 2, 3];
 newValue = 2.5;
