@@ -1,6 +1,4 @@
-"use strict";
 // Interface vs Type
-Object.defineProperty(exports, "__esModule", { value: true });
 const masala = {
     flavour: "masala",
     price: 30
@@ -24,4 +22,5 @@ const u = {
     name: "Nikhil",
     age: 22
 };
+export {};
 //# sourceMappingURL=interface2.js.map

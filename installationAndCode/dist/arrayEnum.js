@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const chaiFlavours = ["Masala", "Adrak"];
 const chaiPrice = [20, 25];
 const price = [3, 4, 8];
@@ -81,4 +79,5 @@ const s = Sugar.MEDIUM;
 // Because Ts still thinks t[2] is invalid
 let t = ["chai", 10];
 t.push("extra");
+export {};
 //# sourceMappingURL=arrayEnum.js.map

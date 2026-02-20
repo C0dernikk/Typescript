@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function wrapInArray(item) {
     return [item];
 }
@@ -18,4 +16,5 @@ const res = {
     status: 200,
     data: { flavour: "masala" }
 };
+export {};
 //# sourceMappingURL=generics.js.map

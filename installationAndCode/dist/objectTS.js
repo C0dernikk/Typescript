@@ -1,6 +1,4 @@
-"use strict";
 // Declaring object types
-Object.defineProperty(exports, "__esModule", { value: true });
 // Plain js object(TS infers)
 const chai = {
     name: "Masala chai",
@@ -48,4 +46,5 @@ const chaiInfo = {
     // name: "ice tea",
     price: 3
 };
+export {};
 //# sourceMappingURL=objectTS.js.map

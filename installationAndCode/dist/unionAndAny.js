@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let subs = '1M';
 let apiStatus = 'pending';
 let airlineSeat = 'aisle';
@@ -15,4 +13,5 @@ for (const order of orders) {
     currOrder = "33";
 }
 console.log(currOrder);
+export {};
 //# sourceMappingURL=unionAndAny.js.map

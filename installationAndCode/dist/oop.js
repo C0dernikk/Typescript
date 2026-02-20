@@ -1,8 +1,6 @@
-"use strict";
 // class Chai {
 //     flavour: string;
 //     price: number;
-Object.defineProperty(exports, "__esModule", { value: true });
 //     // constructor(flavour: string, price: number){
 //     //     this.flavour = flavour
 //     //     this.price = price
@@ -101,4 +99,5 @@ class ChaiMaker {
         this.heater.heat;
     }
 }
+export {};
 //# sourceMappingURL=oop.js.map

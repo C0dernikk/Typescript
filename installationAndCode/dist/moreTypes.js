@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let response = 44;
 // we can access any property or method, to get suggestion
 // and make sure we know the type we use forceful assertion
@@ -46,4 +44,5 @@ function redirectBasedOnRole(role) {
 function neverReturn() {
     while (true) { }
 }
+export {};
 //# sourceMappingURL=moreTypes.js.map
